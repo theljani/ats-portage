@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Header.css';
 
@@ -6,22 +7,20 @@ export function Header() {
     return (
         <div className = 'Header'>
             <div className='Header-companyName'>
-                <span className='Header-companyName-title'>ATS PORTAGE</span>
+                <Link to="/">
+                    <span className='Header-companyName-title'>ATS PORTAGE</span>
+                </Link>
             </div>
 
             <div className='Header-menu'>
                 <div className='Header-menu-item'>
-                    Accueil
+                    <Link to="/">Accueil</Link>
                 </div>
                 <div className='Header-menu-item'>
-                    Nos services
+                    <Link to="/simulateur">Simulateur</Link>
                 </div>
                 <div className='Header-menu-item'>
-                    Simulateur
-                </div>
-
-                <div className='Header-menu-item'>
-                    Contact
+                    <Link to="/contact">Contact</Link>
                 </div>
             </div>
         </div>
