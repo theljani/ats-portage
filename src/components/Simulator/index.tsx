@@ -232,8 +232,8 @@ export default function Simulator() {
                     </select>
 
                     {motorized === 'OUI' && <div className="input-group">
-                        <span>Nombre de kilomètres à effectuer par jour</span>
-                        <input type="tel" value={km} onChange={e => setKm(Number(e.target.value))}
+                        <span>Nombre de kilomètres à effectuer par jour (<b>40 km maximum</b>)</span>
+                        <input type="tel" value={km} onChange={e => setKm(Number(e.target.value) > 40 ? 40 : Number(e.target.value))}
                         min='0'/>
 
                         <span>Puissance fiscale</span>
