@@ -1,0 +1,83 @@
+.Simulator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.Simulator-title {
+    padding-top: 5px;
+    text-align: left;
+}
+
+.Simulator-title h2 {
+    margin: 50px 350px;
+}
+
+.Simulator-content {
+    margin: 0 350px;
+    padding: 40px 50px;
+    background: white;
+}
+.Simulator-description {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.Simulator-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 15px 0;
+}
+
+.Simulator-form-badge {
+    background-color: #a1c331;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.Simulator-form-step {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 20px 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+.Simulator-form-step-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.Simulator-form-step-text {}
+
+.Simulator-form-step-input {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.Simulator-form-step-input input, select {
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #f5f5f5;
+    width: 500px;
+}
+
+.Simulator-form-step-input select {
+    height: 43px;
+    width: 509px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
