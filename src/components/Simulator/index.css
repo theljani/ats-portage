@@ -111,6 +111,7 @@
     }
     .Simulator-form-step-title {
         padding: 10px 0;
+        margin-bottom: 0;
     }
     .Simulator-form-badge {
         width: 25px;
