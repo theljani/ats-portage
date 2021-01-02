@@ -26,7 +26,6 @@
     font-weight: 400;
     cursor: pointer;
 }
-
 .Header-menu {
     display: flex;
     flex-direction: row;
@@ -44,4 +43,32 @@
 .Header-menu-item a {
     text-decoration: none;
     color: inherit;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+    .Header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 120px;
+    }
+
+    .Header-companyName {
+        padding: 10px 0;
+    }
+    .Header-companyName a {
+    }
+    .Header-companyName-title {}
+    .Header-menu {
+        padding: 10px 0;
+    }
+    .Header-menu-item {}
+    .Header-menu-item  {}
+    .Header-menu-item:hover {}
+    .Header-menu-item a {}
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
 }

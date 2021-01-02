@@ -4,33 +4,29 @@
     justify-content: center;
     margin-bottom: 50px;
 }
-
 .Simulator-title {
     padding-top: 5px;
     text-align: left;
 }
-
 .Simulator-title h2 {
     margin: 50px 350px;
 }
-
 .Simulator-content {
     margin: 0 350px;
     padding: 40px 50px;
     background: white;
 }
+
 .Simulator-description {
     margin-bottom: 30px;
     text-align: left;
 }
-
 .Simulator-form {
     display: flex;
     flex-direction: column;
     justify-content: left;
     padding: 15px 0;
 }
-
 .Simulator-form-badge {
     background-color: #a1c331;
     width: 55px;
@@ -64,11 +60,9 @@
     font-size: 15px;
     font-weight: 600;
 }
-
 .Simulator-form-step-input span {
     color: #57665E;
 }
-
 .Simulator-form-step-input input, select {
     height: 35px;
     margin-top: 5px;
@@ -82,8 +76,59 @@
     height: 43px;
     width: 509px;
 }
-
 .input-group {
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+    .Simulator {
+        overflow-x: hidden;
+        margin-bottom: 0;
+    }
+
+    .Simulator-title h2 {
+        margin: 10px;
+        font-size: 15px;
+    }
+    .Simulator-description span {
+        font-size: 13px;
+    }
+
+    .Simulator-content {
+        margin: 0;
+        padding: 10px;
+        background: white;
+    }
+    .Simulator-form {
+        padding: 0;
+    }
+    .Simulator-form-step {
+        margin: 0;
+        font-weight: 700;
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    .Simulator-form-step-title {
+        padding: 10px 0;
+    }
+    .Simulator-form-badge {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+        margin-right: 5px;
+        padding: 2px;
+    }
+    .Simulator-form-step-input {
+        margin-left: 5px;
+    }
+
+    .Simulator-form-step-input input {
+        width: auto;
+    }
+
+    .Simulator-form-step-input select {
+        width: auto;
+    }
+    
 }

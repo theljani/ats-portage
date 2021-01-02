@@ -6,6 +6,7 @@ export default function Simulator() {
     const [leaveDays, setLeaveDays] = useState(25);
     const [portagePercent, setPortagePercent] = useState(6);
     const [mutual, setMutual] = useState(0);
+    
     // const [motorized, setMotorized] = useState('NON');
     // const [km, setKm] = useState(0);
     // const [power, setPower] = useState(0);
@@ -160,6 +161,7 @@ export default function Simulator() {
                 </div> 
             </div>
           </div>
+        
         </div>
       </div>
     );
