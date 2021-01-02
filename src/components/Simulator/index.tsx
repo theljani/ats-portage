@@ -44,7 +44,7 @@ export default function Simulator() {
             <div className="Simulator-form-step">
                 <div className='Simulator-form-step-title'>               
                     <div className="Simulator-form-badge">
-                        <span>1</span>
+                        1
                     </div>
                     <span className="Simulator-form-step-text">
                         ENTREZ LES INFORMATIONS DE VOTRE MISSION
@@ -139,7 +139,7 @@ export default function Simulator() {
             <div className="Simulator-form-step">
                 <div className='Simulator-form-step-title'>
                     <div className="Simulator-form-badge">
-                        <span>2</span>
+                        2
                     </div>
                     <span className="Simulator-form-step-title">
                         RÉSULTATS DE VOTRE SIMULATION

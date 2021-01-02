@@ -74,7 +74,7 @@
 
 .Simulator-form-step-input select {
     height: 43px;
-    width: 509px;
+    width: 525px;
 }
 .input-group {
     display: flex;
@@ -118,6 +118,7 @@
         height: 25px;
         font-size: 16px;
         margin-right: 5px;
+        padding-top: 3px;
     }
     .Simulator-form-step-input {
         margin-left: 5px;
