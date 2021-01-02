@@ -109,7 +109,7 @@ export default function Simulator() {
 
         return kmfees;
     }
-    
+
     const computeSalary = () => {
         const workingDays = leaveDays === 20 ? 20: 19;
         const kmFees = computeKmFees();
@@ -121,6 +121,17 @@ export default function Simulator() {
         const totalSalarty = Number(netSalary) + Number(kmFees);
         return totalSalarty.toFixed(2);
     }
+    
+    function initForm() {
+        setTjm(0);
+        setLeaveDays(25);
+        setPortagePercent(6);
+        setMutual(0);
+        setMotorized('NON');
+        setKm(0);
+        setFiscalPower(0);
+    }
+
     return (
       <div className="Simulator">
         <div className="Simulator-title">
@@ -148,7 +159,7 @@ export default function Simulator() {
                 </div>
                 <div className='Simulator-form-step-input'>
                     <span>Chiffre d'affaire H.T ou TJM</span>
-                    <input type="number" value={tjm} onChange={e => setTjm(Number(e.target.value))} min='0'/>
+                    <input type="tel" value={tjm} onChange={e => setTjm(Number(e.target.value))} min='0'/>
                 </div>
                 <div className='Simulator-form-step-input'>
                     <span>Nombre de jours de congés</span>
@@ -222,11 +233,11 @@ export default function Simulator() {
 
                     {motorized === 'OUI' && <div className="input-group">
                         <span>Nombre de kilomètres à effectuer par jour</span>
-                        <input type="number" value={km} onChange={e => setKm(Number(e.target.value))}
+                        <input type="tel" value={km} onChange={e => setKm(Number(e.target.value))}
                         min='0'/>
 
                         <span>Puissance fiscale</span>
-                        <input type="number" value={fiscalPower} onChange={e => setFiscalPower(Number(e.target.value))} 
+                        <input type="tel" value={fiscalPower} onChange={e => setFiscalPower(Number(e.target.value))} 
                         min='0'/>
                     </div>}
                 </div>
@@ -256,9 +267,13 @@ export default function Simulator() {
                     <input type="text" value={computeSalary()} min='0' disabled={true}/>
                 </div> 
             </div>
-          </div>
-        
-        </div>
+            <div className='Simulator-form-actions'>
+                <button className='Simulator-form-actions-init'
+                    onClick={() => initForm()}
+                >Réinitialiser</button>
+            </div>
+          </div>     
+        </div>      
       </div>
     );
 }

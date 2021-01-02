@@ -81,6 +81,24 @@
     flex-direction: column;
 }
 
+.Simulator-form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.Simulator-form-actions-init {
+    margin-right: 290px;
+    height: 50px;
+    width: 200px;
+    border: 0;
+    background: #a1c331;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
     .Simulator {
         overflow-x: hidden;
@@ -130,6 +148,10 @@
 
     .Simulator-form-step-input select {
         width: auto;
-    }
+    } 
     
+    .Simulator-form-actions-init {
+        width: 100%;
+        margin: 0 0 0 5px;
+    }
 }
