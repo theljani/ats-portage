@@ -16,9 +16,9 @@ function App() {
           <Header />
           <div className='App-content'>
             <Switch>
-              <Route exact path="/" component={Welcome} />
+              <Route exact path="/" component={Simulator} />
               <Route exact path="/simulateur" component={Simulator} />
-              <Route exact path="/contact" component={Contact} />
+              {/* <Route exact path="/contact" component={Contact} /> */}
             </Switch>
           </div>
         </Router>

@@ -13,15 +13,15 @@ export function Header() {
             </div>
 
             <div className='Header-menu'>
-                <div className='Header-menu-item'>
+                {/* <div className='Header-menu-item'>
                     <Link to="/">Accueil</Link>
-                </div>
+                </div> */}
                 <div className='Header-menu-item'>
                     <Link to="/simulateur">Simulateur</Link>
                 </div>
-                <div className='Header-menu-item'>
+                {/* <div className='Header-menu-item'>
                     <Link to="/contact">Contact</Link>
-                </div>
+                </div> */}
             </div>
         </div>
     );

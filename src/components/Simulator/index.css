@@ -64,12 +64,18 @@
     font-size: 15px;
     font-weight: 600;
 }
+
+.Simulator-form-step-input span {
+    color: #57665E;
+}
+
 .Simulator-form-step-input input, select {
     height: 35px;
     margin-top: 5px;
     margin-bottom: 15px;
     border: 2px solid #f5f5f5;
     width: 500px;
+    padding: 0 10px;
 }
 
 .Simulator-form-step-input select {

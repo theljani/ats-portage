@@ -3,13 +3,27 @@ import './index.css';
 
 export default function Simulator() {
     const [tjm, setTjm] = useState(0);
-    const [leaveDays, setLeaveDays] = useState(20);
+    const [leaveDays, setLeaveDays] = useState(25);
     const [portagePercent, setPortagePercent] = useState(6);
     const [mutual, setMutual] = useState(0);
-    const [motorized, setMotorized] = useState('NON');
-    const [km, setKm] = useState(0);
-    const [power, setPower] = useState(0);
+    // const [motorized, setMotorized] = useState('NON');
+    // const [km, setKm] = useState(0);
+    // const [power, setPower] = useState(0);
 
+    const computeBudget = () => {
+        const workingDays = leaveDays === 20 ? 20: 19;
+        return workingDays * tjm;
+    }
+
+    const computePortageFees = () => {
+        const workingDays = leaveDays === 20 ? 20: 19;
+
+        return workingDays * tjm * portagePercent / 100;
+    }
+
+    const computeSalary = () => {
+        return ((computeBudget() - computePortageFees() - mutual ) / 1.82).toFixed(2);
+    }
     return (
       <div className="Simulator">
         <div className="Simulator-title">
@@ -19,7 +33,7 @@ export default function Simulator() {
           <div className="Simulator-description">
             <span>
               Cette simulation de portage salarial est à titre indicatif. Elle
-              vous permet d'évaluer votre futur <b>salaire net</b> sur la base
+              vous permet d'évaluer votre futur <b>salaire net</b> en euro sur la base
               de votre chiffre d'affaires, de vos frais professionnels et de vos
               options choisies.
             </span>
@@ -39,7 +53,6 @@ export default function Simulator() {
                     <span>Chiffre d'affaire H.T ou TJM</span>
                     <input type="number" value={tjm} onChange={e => setTjm(Number(e.target.value))} min='0'/>
                 </div>
-
                 <div className='Simulator-form-step-input'>
                     <span>Nombre de jours de congés</span>
                     <select  value={leaveDays} onChange={e => setLeaveDays(Number(e.target.value))}>
@@ -53,7 +66,6 @@ export default function Simulator() {
                         </optgroup>
                     </select>
                 </div>
-
                 <div className='Simulator-form-step-input'>
                     <span>Frais de portage %</span>
                     <select  value={portagePercent} onChange={e => setPortagePercent(Number(e.target.value))} disabled={true}>
@@ -98,7 +110,7 @@ export default function Simulator() {
                         </optgroup>
                     </select>
                 </div>
-                <div className='Simulator-form-step-input'>
+                {/* <div className='Simulator-form-step-input'>
                     <span>Êtes vous motorisé?</span>
                     <select  value={motorized} onChange={e => setMotorized(e.target.value)}>
                         <optgroup>
@@ -120,7 +132,7 @@ export default function Simulator() {
                         <input type="number" value={power} onChange={e => setPower(Number(e.target.value))} 
                         min='0'/>
                     </div>}
-                </div>
+                </div> */}
             </div>
 
             <div className="Simulator-form-step">
@@ -132,6 +144,20 @@ export default function Simulator() {
                         RÉSULTATS DE VOTRE SIMULATION
                     </span>
                 </div>
+
+                <div className='Simulator-form-step-input'>
+                    <span>Chiffre d'affaires mensuel</span>
+                    <input type="number" value={computeBudget()} min='0' disabled={true}/>
+                </div>
+
+                <div className='Simulator-form-step-input'>
+                    <span>Frais de portage mensuel</span>
+                    <input type="number" value={computePortageFees()} min='0' disabled={true}/>
+                </div> 
+                <div className='Simulator-form-step-input'>
+                    <span>Salaire Total</span>
+                    <input type="number" value={computeSalary()} min='0' disabled={true}/>
+                </div> 
             </div>
           </div>
         </div>
