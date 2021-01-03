@@ -27,84 +27,86 @@ export default function Simulator() {
         const kmPerMonth = getWorkingDays() * km;
         let kmfees = 0;
 
-        if (fiscalPower <= 3) {
-            if (kmPerMonth <= 5000) {
-                kmfees = kmPerMonth * 0.456;
+        if(motorized === 'OUI') {
+            if (fiscalPower <= 3) {
+                if (kmPerMonth <= 5000) {
+                    kmfees = kmPerMonth * 0.456;
+                }
+    
+                if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
+                    kmfees = (kmPerMonth * 0.270) + 915;
+                }
+    
+                if (kmPerMonth > 20000) {
+                    kmfees = kmPerMonth * 0.318;
+                }
+    
+                return kmfees;
             }
-
-            if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
-                kmfees = (kmPerMonth * 0.270) + 915;
+    
+            if (fiscalPower === 4) {
+                if (kmPerMonth <= 5000) {
+                    kmfees = kmPerMonth * 0.523;
+                }
+    
+                if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
+                    kmfees = (kmPerMonth * 0.291) + 1447;
+                }
+    
+                if (kmPerMonth > 20000) {
+                    kmfees = kmPerMonth * 0.352;
+                }
+                
+                return kmfees;
             }
-
-            if (kmPerMonth > 20000) {
-                kmfees = kmPerMonth * 0.318;
+    
+            if (fiscalPower === 5) {
+                if (kmPerMonth <= 5000) {
+                    kmfees = kmPerMonth * 0.548;
+                }
+    
+                if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
+                    kmfees = (kmPerMonth * 0.305) + 1200;
+                }
+    
+                if (kmPerMonth > 20000) {
+                    kmfees = kmPerMonth * 0.368;
+                }
+    
+                return kmfees;
             }
-
-            return kmfees;
-        }
-
-        if (fiscalPower === 4) {
-            if (kmPerMonth <= 5000) {
-                kmfees = kmPerMonth * 0.523;
+    
+            if (fiscalPower === 6) {
+                if (kmPerMonth <= 5000) {
+                    kmfees = kmPerMonth * 0.574;
+                }
+    
+                if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
+                    kmfees = (kmPerMonth * 0.32) + 1253;
+                }
+    
+                if (kmPerMonth > 20000) {
+                    kmfees = kmPerMonth * 0.386;
+                }
+    
+                return kmfees;
             }
-
-            if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
-                kmfees = (kmPerMonth * 0.291) + 1447;
+    
+            if (fiscalPower >= 7) {
+                if (kmPerMonth <= 5000) {
+                    kmfees = kmPerMonth * 0.601;
+                }
+    
+                if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
+                    kmfees = (kmPerMonth * 0.337) + 1301;
+                }
+    
+                if (kmPerMonth > 20000) {
+                    kmfees = kmPerMonth * 0.405;
+                }
+    
+                return kmfees;
             }
-
-            if (kmPerMonth > 20000) {
-                kmfees = kmPerMonth * 0.352;
-            }
-            
-            return kmfees;
-        }
-
-        if (fiscalPower === 5) {
-            if (kmPerMonth <= 5000) {
-                kmfees = kmPerMonth * 0.548;
-            }
-
-            if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
-                kmfees = (kmPerMonth * 0.305) + 1200;
-            }
-
-            if (kmPerMonth > 20000) {
-                kmfees = kmPerMonth * 0.368;
-            }
-
-            return kmfees;
-        }
-
-        if (fiscalPower === 6) {
-            if (kmPerMonth <= 5000) {
-                kmfees = kmPerMonth * 0.574;
-            }
-
-            if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
-                kmfees = (kmPerMonth * 0.32) + 1253;
-            }
-
-            if (kmPerMonth > 20000) {
-                kmfees = kmPerMonth * 0.386;
-            }
-
-            return kmfees;
-        }
-
-        if (fiscalPower >= 7) {
-            if (kmPerMonth <= 5000) {
-                kmfees = kmPerMonth * 0.601;
-            }
-
-            if (kmPerMonth > 5000 && kmPerMonth <= 20000) {
-                kmfees = (kmPerMonth * 0.337) + 1301;
-            }
-
-            if (kmPerMonth > 20000) {
-                kmfees = kmPerMonth * 0.405;
-            }
-
-            return kmfees;
         }
 
         return kmfees;
