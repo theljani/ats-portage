@@ -117,6 +117,7 @@
         margin: 0;
         padding: 10px;
         background: white;
+        /* z-index: -1; */
     }
     .Simulator-form {
         padding: 0;

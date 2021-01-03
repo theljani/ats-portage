@@ -15,6 +15,13 @@
     color: #4b5865;
     background-color: white;
 }
+
+.Header-menu-item a.active {
+    color: #a1c331;
+}
+.Header-mobile {
+    display: none;
+}
 .Header-companyName a {
     text-decoration: none;
     color: inherit;
@@ -44,29 +51,99 @@
     text-decoration: none;
     color: inherit;
 }
-
 /* For mobile phones: */
 @media only screen and (max-width: 768px) {
     .Header {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 120px;
+        display: none;
+    }
+    .Header-mobile {
+        display: block;
+        height: 60px;
+        background: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .Header-companyName-mobile {
+        position: fixed;
+        left: 15px;
+        top: 20px;
+        font-size: 15px;
+        width: auto;
+        cursor: pointer;
+        color: #4b5865;
     }
 
-    .Header-companyName {
-        padding: 10px 0;
+    .Header-companyName-mobile a {
+        text-decoration: none;
+        color: #4b5865;
     }
-    .Header-companyName a {
+    
+    .bm-menu-wrap {
+        margin-left: -3px;
+        width: auto !important;
     }
-    .Header-companyName-title {}
-    .Header-menu {
-        padding: 10px 0;
+    .bm-item {
+        display: inline-block;
+    
+        /* Our sidebar item styling */
+        text-decoration: none;
+        margin-bottom: 10px;
+        color: #d1d1d1;
+        transition: color 0.2s;
     }
-    .Header-menu-item {}
-    .Header-menu-item  {}
-    .Header-menu-item:hover {}
-    .Header-menu-item a {}
+    
+    .bm-item:hover {
+        color: white;
+    }
+    
+    .bm-burger-button {
+        position: fixed;
+        width: 36px;
+        height: 30px;
+        right: 15px;
+        top: 15px;
+    }
+    
+    /* Color/shape of burger icon bars */
+    .bm-burger-bars {
+        background: #373a47;
+    }
+    
+    /* Position and sizing of clickable cross button */
+    .bm-cross-button {
+        height: 24px;
+        width: 24px;
+    }
+    
+    /* Color/shape of close button cross */
+    .bm-cross {
+        background: #bdc3c7;
+    }
+    
+    /* General sidebar styles */
+    .bm-menu {
+        background: #000;
+        padding: 2.5em 1.5em 0;
+        font-size: 1.15em;
+    }
+    
+    /* Morph shape necessary with bubble or elastic */
+    .bm-morph-shape {
+        fill: #373a47;
+    }
+    
+    /* Wrapper for item list */
+    .bm-item-list {
+        color: #b8b7ad;
+    }
+    
+    /* Styling of overlay */
+    .bm-overlay {
+        background: rgba(0, 0, 0, 0.1);
+        opacity: 0.5
+    }
 }
 
 @media only screen and (min-width: 600px) {
