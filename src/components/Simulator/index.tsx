@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import './index.css';
 
 export default function Simulator() {
@@ -149,12 +150,12 @@ export default function Simulator() {
             </span>
           </div>
 
-          <div className="Simulator-form">
+          <div className="Simulator-form">  
             <div className="Simulator-form-step">
                 <div className='Simulator-form-step-title'>               
-                    <div className="Simulator-form-badge">
+                    {/* <div className="Simulator-form-badge">
                         1
-                    </div>
+                    </div> */}
                     <span className="Simulator-form-step-text">
                         ENTREZ LES INFORMATIONS DE VOTRE MISSION
                     </span>
@@ -234,8 +235,8 @@ export default function Simulator() {
                     </select>
 
                     {motorized === 'OUI' && <div className="input-group">
-                        <span>Nombre de kilomètres à effectuer par jour (<b>40 km maximum</b>)</span>
-                        <input type="tel" value={km} onChange={e => setKm(Number(e.target.value) > 40 ? 40 : Number(e.target.value))}
+                        <span>Nombre de kilomètres à effectuer par jour</span>
+                        <input type="tel" value={km} onChange={e => setKm(Number(e.target.value))}
                         min='0'/>
 
                         <span>Puissance fiscale</span>
@@ -244,12 +245,11 @@ export default function Simulator() {
                     </div>}
                 </div>
             </div>
-
             <div className="Simulator-form-step">
                 <div className='Simulator-form-step-title'>
-                    <div className="Simulator-form-badge">
+                    {/* <div className="Simulator-form-badge">
                         2
-                    </div>
+                    </div> */}
                     <span className="Simulator-form-step-title">
                         RÉSULTATS DE VOTRE SIMULATION
                     </span>
@@ -268,12 +268,24 @@ export default function Simulator() {
                     <span>Salaire Total</span>
                     <input type="text" value={computeSalary()} min='0' disabled={true}/>
                 </div> 
+                {/* <button className='Simulator-form-actions-init'
+                    onClick={() => initForm()}
+                >Réinitialiser</button> */}
             </div>
-            <div className='Simulator-form-actions'>
+
+
+            <div className="Simulator-form-step">
+
+                <div className='Simulator-form-step-title'>
+
+                </div>
+
                 <button className='Simulator-form-actions-init'
                     onClick={() => initForm()}
                 >Réinitialiser</button>
             </div>
+            {/* <div className='Simulator-form-actions'>
+            </div> */}
           </div>     
         </div>      
       </div>

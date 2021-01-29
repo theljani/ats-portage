@@ -22,7 +22,7 @@ export function Header(props: any) {
       <div className="Header-mobile">
         <div className="Header-companyName-mobile">
           <Link to="/">
-            <span className="Header-companyName-title-mobile">ATS PORTAGE</span>
+            <span className="Header-companyName-title-mobile">ATS CONSULTING</span>
           </Link>
         </div>
         <Menu
@@ -47,7 +47,7 @@ export function Header(props: any) {
       <div className="Header">
         <div className="Header-companyName">
           <Link to="/">
-            <span className="Header-companyName-title">ATS PORTAGE</span>
+            <span className="Header-companyName-title">ATS CONSULTING</span>
           </Link>
         </div>
 
